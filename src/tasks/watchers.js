@@ -27,7 +27,7 @@ function checkDeployStatus() {
   }
 
   if (cache.change.length) {
-    deploy('upload', cache.change, environment);
+    deploy('deploy', cache.change, environment);
     cache.change = [];
   } else if (cache.unlink.length) {
     deploy('remove', cache.unlink, environment);
