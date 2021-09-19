@@ -70,11 +70,6 @@ gulp.task('watch', () => {
 function defineWatchTasks() {
   const tasks = ['watch:src', 'watch:dist', 'watch:dist-config'];
 
-  // unless --nosync flag is set, start browser-sync
-  if (!argv.nosync) {
-    tasks.push('deploy:sync-reload');
-  }
-
   return tasks;
 }
 
